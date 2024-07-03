@@ -219,3 +219,67 @@ let g = innerWidth;
 // const secondInput = prompt("podaj kolejną liczbe");
 
 // console.log(`wynik dodawania : ${parseInt(userInput) + parseInt(secondInput)}`);
+
+// function foo() {
+//   for (let i = 0; i < 10; i++) {
+//     setTimeout(function () {
+//       console.log(i);
+//     }, 300);
+//   }
+// }
+
+let re;
+
+console.log(re);
+
+const object = {
+  name: "tomek",
+  surname: "palica",
+  age: 21,
+};
+
+function readObj({ name, surname, age }) {
+  console.log(name, surname, age);
+}
+
+readObj(object);
+
+// for (let i = 0; i <= 100; i++) {
+//   if (i % 3 === 0 && i % 5 === 0) {
+//     console.log("FizzBuzz");
+//   } else if (i % 3 === 0) {
+//     console.log("Fizz");
+//   } else if (i % 5 === 0) {
+//     console.log("Buzz");
+//   } else {
+//     console.log(i);
+//   }
+// }
+
+function reverse(string) {
+  let array = string.split(" ");
+
+  let result = [];
+  // for (i = array.length; i > 0; i--) {
+  //   console.log(i);
+  //   result.push(array[i - 1]);
+  // }
+  for (i = 0; i < array.length; i++) {
+    result.unshift(array[i]);
+  }
+  console.log(result.join(" "));
+}
+reverse("Ala ma kota");
+
+const array2 = [1, 2, 2, 3, 4, 5, 5, 6];
+const filteredArray = array2.filter((el, i, arr) => arr.indexOf(el) === i);
+const empty = [];
+const filteredArray2 = array2.forEach((el) => {
+  if (empty.includes(el)) {
+    return;
+  } else {
+    empty.push(el);
+  }
+});
+console.log(filteredArray);
+console.log(empty);
